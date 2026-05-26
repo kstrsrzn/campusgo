@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusGo 校園點餐系統</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CampusGo</h1>
+    <p>校園點餐與配送系統</p>
+  </header>
+
+  <main>
+    <section class="stores">
+      <h2>熱門店家</h2>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop" />
+        <h3>校園披薩屋</h3>
+        <p>經典起司披薩</p>
+        <button onclick="addToCart('披薩',150)">加入購物車 NT$150</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop" />
+        <h3>漢堡研究社</h3>
+        <p>雙層牛肉漢堡</p>
+        <button onclick="addToCart('漢堡',120)">加入購物車 NT$120</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" />
+        <h3>晨間咖啡</h3>
+        <p>冰拿鐵</p>
+        <button onclick="addToCart('咖啡',80)">加入購物車 NT$80</button>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>購物車</h2>
+      <ul id="cart-list"></ul>
+      <h3 id="total">總金額：NT$0</h3>
+
+      <label>配送地點</label>
+      <input id="location" placeholder="例如：資訊大樓門口" />
+
+      <button class="checkout" onclick="checkout()">送出訂單</button>
+
+      <div id="status"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>CampusGo © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
